@@ -53,7 +53,7 @@ func main() {
 		if status[i] == "Up" {
 			statusUp++
 			fmt.Println(interfaces[i], ":", status[i], "-", speedConverter(speed[i]))
-		} else {
+		} else if status[i] == "Down" {
 			statusDown++
 			fmt.Println(interfaces[i], ":", status[i], "-", speedConverter(speed[i]), "[WARNING]")
 		}
